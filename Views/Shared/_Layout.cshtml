@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="contenedor">
+        <header>
+        <div id="cabecera">
+            
+            <div id="search">
+                <form action="#" method="post" id="buscador">
+                    Buscar&nbsp;
+                    <input name="Busqueda" type="text" />
+                </form>
+            </div>
+            
+            </div>
+        </header>
+            <nav id="navegacion">
+                <img src="~/Content/logo.jpg" alt="Logo" id="logo" />
+                <ul id="menu_principal">
+                    <li> <a href="/">Home</a> </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Afiliados")">Afiliados</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section id="contenido">
+                <article id="principal">
+                    @RenderBody()
+                </article>
+                <aside id="sidebar">
+                    <h2> Opciones</h2>
+                </aside>
+            </section>
+
+            <footer id="pie">
+                <p> Obra Social NWB - Todos los derechos reservados.</p>
+            </footer>
+
+
+</div>
+</body>
+</html>

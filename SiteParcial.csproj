@@ -94,19 +94,50 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\logo.jpg" />
+    <Content Include="Content\site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
+    <Content Include="Views\Afiliados\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Afiliados\Create.cshtml" />
+    <Content Include="Views\Afiliados\Delete.cshtml" />
+    <Content Include="Views\Afiliados\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Business\AfiliadosBiz.cs" />
+    <Compile Include="Controllers\AfiliadosController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Data\Services\BaseDataService.cs" />
+    <Compile Include="Data\Services\IDataService.cs" />
+    <Compile Include="Data\Services\SiteDBContext.cs" />
+    <Compile Include="Entities\Models\Afiliados.cs" />
+    <Compile Include="Entities\Models\IdentityBase.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105312249177_Initial.cs" />
+    <Compile Include="Migrations\202105312249177_Initial.designer.cs">
+      <DependentUpon>202105312249177_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105312317385_Initial1.cs" />
+    <Compile Include="Migrations\202105312317385_Initial1.designer.cs">
+      <DependentUpon>202105312317385_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -116,8 +147,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105312249177_Initial.resx">
+      <DependentUpon>202105312249177_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105312317385_Initial1.resx">
+      <DependentUpon>202105312317385_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
